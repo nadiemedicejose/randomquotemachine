@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  place-content: center;
+  align-items: center;
+
+  font-family: 'Sora', 'Helvetica', 'Source Sans Pro', sans-serif;
+  background-color: #1509c4;
+  color: white;
+}
+
+#quote-box {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  background-color: rgba(0, 0, 0, 20%);
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 30%);
+}
+
+#text {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  font-size: 25px;
+  line-height: 35px;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 20%);
+  border-radius: 1rem 1rem 0 0;
+}
+
+#text-container {
+  width: 100%;
+}
+
+#text-container::before, #text-container::after {
+  position: relative;
+  z-index: 1;
+  font-size: 100px;
+  line-height: 35px;
+}
+
+#text-container::before {
+  right: 0.8rem;
+  margin-right: -2rem;
+  float: left;
+  content: '“';
+  color: white;
+}
+  
+#text-container::after {
+  bottom: -1rem;
+  left: 1rem;
+  margin-left: -2rem;
+  float: right;
+  content: '”';
+  color: white;
+}
+
+#author {
+  margin-left: 1rem;
+  color: white;
+  font-weight: bold;
+}
+
+#author::before {
+  content: '— ';
+  font-weight: 400;
+}
+
+#buttons-container {
+  max-width: 100%;
+  margin: 1rem;
+  display: flex;
+  place-content: center;
+}
+
+#tweet-quote, #new-quote {
+  font-size: 1rem;
+  text-decoration: none;
+  margin-left: 1rem;
+  padding: 0.5rem;
+  border-radius: 3px;
+  background-color: #1DA1F2;
+  color: white;
+}
